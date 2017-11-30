@@ -1,12 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a routerLink="" class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a routerLink="/login" class="nav-item nav-link" href="#">Login</a>
-      <a routerLink="/cursos" class="nav-item nav-link" href="#">Cursos</a>
+      <a routerLinkActive="active" routerLink="" class="nav-item nav-link" href="#">Home</a>
+      <a routerLinkActive="active" routerLink="/login" class="nav-item nav-link" href="#">Login</a>
+      <a routerLinkActive="active" routerLink="/cursos" class="nav-item nav-link" href="#">Cursos</a>
+      <a routerLinkActive="active" [routerLink]="['curso', idCurso.value]" class="nav-item nav-link" href="#">Curso com Id</a>
     </div>
   </div>
 </nav>
 <div>
+  <p>Entre com o id do curso</p>
+  <input #idCurso>
   <router-outlet></router-outlet>
 </div>
